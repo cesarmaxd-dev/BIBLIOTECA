@@ -12,7 +12,7 @@
         <h1>Cadastro de Usuário</h1>
         <p class="subtitulo">Crie uma conta para acessar o sistema da biblioteca</p>
 
-        <form action="Salvar_usuario.php" method="post">
+        <form action="salvar_usuario.php" method="post">
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
