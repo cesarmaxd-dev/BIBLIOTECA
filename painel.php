@@ -1,7 +1,7 @@
 <?php
 
 // Inclui a verificação de sessão (protege a página de acesso apenas para usuários logados)
-iclude("verifica_sessao.php");
+include("verifica_sessao.php");
 
 ?>
 <!DOCTYPE html>
