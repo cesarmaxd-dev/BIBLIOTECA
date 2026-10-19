@@ -17,7 +17,7 @@
             echo '<div class="mensagem-erro"> Login inválidos verifique email ou senha.</div>';
         }
         ?>
-    </div>
+   
     <form action="autenticar.php" method="post">
         <div class="form-group">
             <label for="email">Email</label>
@@ -36,6 +36,7 @@
     <div class="dica-navegacao">
         <strong>Fluxo:  </strong> Login -> Painel -> Cadastrar ou listar livros 
     </div>
+     </div>
 </body>
 
 </html>

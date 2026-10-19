@@ -1,8 +1,7 @@
+
 <?php
-
-// Inclui a verificação de sessão (protege a página de acesso apenas para usuários logados)
-include("verifica_sessao.php");
-
+// Protege a página para usuários logados
+include("verificar_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,26 +13,35 @@ include("verifica_sessao.php");
 </head>
 <body>
     <div class="container">
-        // Exibe o nome de usuário logado(vem da sessão $_SESSION)
-        <h1>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h1>
-        <p class="subtitulo">Bem vindo ao painel da biblioteca.
-            Escolha uma opção:</p>
-            //cards grnades para facilitar a navegação do usuário.
-            <div class="painel-cards">
-                <a href="cadastrar_livro.php" class="card-link">Cadastrar Livro
 
-                </a>
-                <a href="listar_livros.php" class="card-link">Listar Livros
+        <!-- Exibe o nome do usuário logado -->
+        <h1>Bem-vindo, <?php echo htmlspecialchars($_SESSION['nome'] ?? 'Usuário'); ?>!</h1>
 
-                </a>
-                <a href="logout.php" class="card-links">
-                    Sair
-                </a>
-            </div>
-            <div class="dica-navegacao">
-                <strong>Fluxo:</strong>
-                Painel → Cadastrar Livro ou listar livros →  editar / excluir.
-            </div>
+        <p class="subtitulo">
+            Bem-vindo ao painel da biblioteca.
+            Escolha uma opção:
+        </p>
+
+        <!-- Cards para facilitar a navegação -->
+        <div class="painel-cards">
+            <a href="cadastrar_livro.php" class="card-link">
+                Cadastrar Livro
+            </a>
+
+            <a href="listar_livros.php" class="card-link">
+                Listar Livros
+            </a>
+
+            <a href="logout.php" class="card-link">
+                Sair
+            </a>
+        </div>
+
+        <div class="dica-navegacao">
+            <strong>Fluxo:</strong>
+            Painel → Cadastrar Livro ou Listar Livros → Editar / Excluir.
+        </div>
+
     </div>
 </body>
 </html>
