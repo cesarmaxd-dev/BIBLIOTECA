@@ -17,26 +17,26 @@
             echo '<div class="mensagem-erro"> Login inválidos verifique email ou senha.</div>';
         }
         ?>
-   
-    <form action="autenticar.php" method="post">
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+
+        <form action="autenticar.php" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="btn btn-block">Entrar</button>
+        </form>
+        <div class="nav-links">
+            <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
         </div>
-        <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+        <a href="cadastro.php" class="btn btn-voltar">Voltar para cadastro</a>
+        <div class="dica-navegacao">
+            <strong>Fluxo: </strong> Login -> Painel -> Cadastrar ou listar livros
         </div>
-        <button type="submit" class="btn btn-block">Entrar</button>
-    </form>
-    <div class="nav-links">
-        <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
     </div>
-    <a href="cadastro.php" class="btn btn-voltar">Voltar para cadastro</a>
-    <div class="dica-navegacao">
-        <strong>Fluxo:  </strong> Login -> Painel -> Cadastrar ou listar livros 
-    </div>
-     </div>
 </body>
 
 </html>

@@ -7,6 +7,6 @@ $conexao = mysqli_connect(
     "biblioteca"
 );
 
-if(!$conexao) {
+if (!$conexao) {
     die("Erro de conexâo" . mysqli_connect_error());
-    }
+}

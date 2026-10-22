@@ -4,10 +4,10 @@
 // Conceitos: POST, INSERT (CREATE A CRUD)
 
 // Protege a página: Apenas usuarios logados podem salvar livros
-include ("verificar_sessao.php");
+include("verificar_sessao.php");
 
 // Incluir a conexão com o banco de dados (MYSQL)
-include ("conexao.php");
+include("conexao.php");
 
 //Recebe os dados enviados pelo formulário via POST
 $titulo = $_POST['titulo'];
@@ -20,5 +20,5 @@ VALUES ('$titulo', '$autor', '$status')";
 
 mysqli_query($conexao, $mysqli);
 
-header("Location: listar_livros.php");
+header("Location: listar_livro.php");
 exit();

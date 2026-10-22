@@ -49,7 +49,8 @@ mysqli_query($conexao, $sql);
 
 //Redireciona o usuario para a página de login após um cadastro bem-sucedudido
 header("Location: login.php");
-exit(); 4
+exit();
+4
 
 
-?>
+    ?>

@@ -2,6 +2,7 @@
 // Código de autenticação: Verifica s o e-mail e a senha estão corretos.
 // Conceitos: session_start, SELECT no  mysql, password_verify
 // Autenticar permite os usuarios permanecerem logados entre as pagínas.
+session_start();
 // Conexao com o banco de dados
 include("conexao.php");
 
@@ -21,18 +22,16 @@ $usuario = mysqli_fetch_assoc($resultado);
 //VERIFICAÇÃO DA SENHA
 //==========================================================================
 // O password_verify() compara a senha digitada com o rash salvo.
-if($usuario && password_verify($senha, $usuario['senha'])) {
-// Login bem-sucedido: Guarda o nome do usuario da sessão
-$_SESSION['nome'] = $usuario ['nome'];
-// Redireciona para o painel principal.
-header("Location: painel.php");
-exit();
+if ($usuario && password_verify($senha, $usuario['senha'])) {
+    // Login bem-sucedido: Guarda o nome do usuario da sessão
+    $_SESSION['nome'] = $usuario['nome'];
+    // Redireciona para o painel principal.
+    header("Location: painel.php");
+    exit();
 } else {
     // Login invalido redireciona de volta para a pagína de loguin.
     // com mensagem de erro.
-    header("Location: login.php?erro=login") ;
+    header("Location: login.php?erro=login");
     exit();
 }
 ?>
-
-

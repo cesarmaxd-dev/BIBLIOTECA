@@ -7,6 +7,7 @@
     <title>CADASTRO</title>
 </head>
 <link rel="stylesheet" href="style.css">
+
 <body>
     <div class="container">
         <h1>Cadastro de Usuário</h1>
