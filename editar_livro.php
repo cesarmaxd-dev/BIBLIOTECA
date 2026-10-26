@@ -63,7 +63,7 @@ $livro = mysqli_fetch_assoc($resultado);
               <!-- Botão de voltar para listagem de livros -->
           <a href="lista_livro.php" class="btn btn-voltar">
             Voltar para a Listagem
-          </a>
+          </a> 
     </div>
 
     
