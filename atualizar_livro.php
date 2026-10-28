@@ -17,12 +17,11 @@ $autor = $_POST['autor'];
 $status = $_POST['status'];
 
 // Monta o comando SQL para alterar os dados do livros
-$sql = "UPDATE livros SET titulo = '$titulo', autor = '$autor', status = '$status' WHERE id = $id"; 
+$sql = "UPDATE livros SET titulo = '$titulo', autor = '$autor', status = '$status' WHERE id = $id";
 
-// Executa o UPDATE no bamco de dados
+// Executa o UPDATE no banco de dados
 mysqli_query($conexao, $sql);
 
 //  Redirecionando para a listagem depois de atualizar
-header("Location: lista_livros.php");
+header("Location: listar_livros.php");
 exit();
-?>
